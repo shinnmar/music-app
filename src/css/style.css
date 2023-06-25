@@ -155,7 +155,7 @@ html {
   }
 }
 
-.music-list {
+.playlist {
   padding: 3rem 0;
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -165,11 +165,100 @@ html {
     rgba(0, 0, 0, 1) 69%
   );
 
+  @media screen and (max-width: 1440px) {
+    padding: 3rem 6rem 3rem 4.6rem;
+  }
+  @media screen and (max-width: 765px) {
+    padding: 3rem 0;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 3rem 0rem 3rem 2rem;
+  }
+
   .subtitle {
     margin: 0 0 3rem 0;
     @media screen and (max-width: 576px) {
       font-size: 1.6rem;
       margin: 0 0 1.5rem 0;
+    }
+  }
+
+  .header-desktop {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+
+    .controls {
+      flex-direction: row;
+      .icons {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @media screen and (max-width: 991px) {
+          justify-content: space-between;
+        }
+        @media screen and (max-width: 765px) {
+          justify-content: flex-end;
+          width: 30%;
+        }
+
+        .play,
+        .btn-follow {
+          padding: 0 3.8rem 0 0;
+          @media screen and (max-width: 765px) {
+            padding: 0 2rem 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .header-mobile {
+    display: none;
+    @media screen and (max-width: 576px) {
+      display: block;
+    }
+
+    .icons {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .shuffle {
+        width: 40px;
+        height: 40px;
+      }
+
+      .play {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .shuffle,
+  .play,
+  .btn-follow,
+  .song-card {
+    cursor: pointer;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1rem 0;
+
+    .left {
+      width: 50%;
+      justify-content: flex-start;
+
+      .btn-follow {
+        width: 92px;
+        height: auto;
+      }
     }
   }
 
@@ -181,6 +270,38 @@ html {
     margin: 0 0 1.6rem 0;
     @media screen and (max-width: 576px) {
       margin: 0 0 2.6rem 0;
+    }
+
+    .icons {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @media screen and (max-width: 991px) {
+        padding: 0;
+      }
+      @media screen and (max-width: 576px) {
+        justify-content: space-around;
+        margin: 0 1.2rem 0 0;
+      }
+
+      .liked-icon {
+        cursor: pointer;
+        width: 38px;
+        height: 38px;
+        margin: 0 10rem 0 0;
+        @media screen and (max-width: 576px) {
+          width: 28px;
+          height: 28px;
+          margin: 0;
+        }
+      }
+
+      .dots-icon {
+        cursor: pointer;
+        width: auto;
+        height: 30px;
+      }
     }
 
     .song {
@@ -229,31 +350,6 @@ html {
           font-size: 1.3rem;
           line-height: 1.8rem;
         }
-      }
-    }
-
-    .icons {
-      padding: 0 4rem 0 0;
-      width: 30%;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      @media screen and (max-width: 576px) {
-        padding: 0;
-      }
-
-      .liked-icon {
-        width: 38px;
-        height: 38px;
-        @media screen and (max-width: 576px) {
-          width: 28px;
-          height: 28px;
-        }
-      }
-
-      .dots-icon {
-        width: auto;
-        height: 30px;
       }
     }
   }
