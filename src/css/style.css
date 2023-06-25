@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   color: #ffffff;
   background: linear-gradient(
       180deg,
@@ -22,16 +22,41 @@ body {
       rgba(0, 0, 0, 0.5) 97.4%
     ),
     rgba(94, 13, 199, 0.66);
+  @media screen and (max-width: 765px) {
+    min-height: 300px;
+  }
+
+  .mobile {
+    display: none;
+    @media screen and (max-width: 576px) {
+      display: block;
+      width: 100%;
+    }
+
+    .mob-img {
+      width: 100%;
+    }
+  }
+
+  .desktop {
+    width: 100%;
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
 
   .title {
     margin: 0;
   }
 
   .img {
-    height: 324px;
+    height: auto;
     @media screen and (max-width: 991px) {
       width: 90%;
-      height: auto;
+    }
+
+    @media screen and (max-width: 765px) {
+      width: 100%;
     }
   }
 }
