@@ -5,6 +5,25 @@
   font-family: "Helvetica Neue", sans-serif;
 }
 
+.follow-link, .profile-link {
+  color: #FFFFFF;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.profile-link {
+  text-decoration: underline;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -22,14 +41,22 @@
       rgba(0, 0, 0, 0.5) 97.4%
     ),
     rgba(94, 13, 199, 0.66);
-  @media screen and (max-width: 765px) {
-    min-height: 300px;
+
+  @media screen and (max-width: 1199px) {
+    min-height: 340px;
   }
-  @media screen and (max-width: 576px) {
+
+  @media screen and (max-width: 991px) {
     min-height: auto;
+    padding: 2rem 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 0;
   }
 
   .mobile {
+    position: relative;
     display: none;
     @media screen and (max-width: 576px) {
       display: block;
@@ -39,27 +66,68 @@
     .mob-img {
       width: 100%;
     }
+
+    .purple-circle-arrow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 19px 0 0 18px;
+    }
   }
 
   .desktop {
+    position: relative;
     width: 100%;
     @media screen and (max-width: 576px) {
       display: none;
+    }
+
+    .img {
+      height: auto;
+
+      @media screen and (max-width: 1199px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 991px) {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      @media screen and (max-width: 765px) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: 576px) {
+        height: auto;
+      }
+    }
+
+    .white-circle-arrow {
+      position: absolute;
+      padding: 0 0 0 46px;
+      top: 0;
+      left: 0;
+      @media screen and (max-width: 991px) {
+        padding: 0 0 0 26px;
+      }
+      @media screen and (max-width: 765px) {
+        padding: 0 0 0 18px;
+      }
     }
   }
 
   .title {
     margin: 0;
   }
+}
 
-  .img {
-    height: auto;
-    @media screen and (max-width: 991px) {
-      width: 90%;
-    }
-
-    @media screen and (max-width: 765px) {
-      width: 100%;
+.profile {
+  .header {
+    .img {
+      width: 50%;
+      height: 100%;
+      border-radius: 40px;
     }
   }
 }
