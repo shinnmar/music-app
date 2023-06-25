@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  color: #ffffff;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 9.9%,
+      rgba(0, 0, 0, 0.16) 25.52%,
+      rgba(0, 0, 0, 0.27) 46.35%,
+      rgba(0, 0, 0, 0.34) 67.19%,
+      rgba(0, 0, 0, 0.45) 85.94%,
+      rgba(0, 0, 0, 0.5) 97.4%
+    ),
+    rgba(94, 13, 199, 0.66);
+
+  .title {
+    margin: 0;
+  }
+
+  .img {
+    height: 324px;
+    @media screen and (max-width: 991px) {
+      width: 90%;
+      height: auto;
+    }
+  }
+}
