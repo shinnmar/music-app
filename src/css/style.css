@@ -191,7 +191,19 @@ html {
     }
 
     .controls {
-      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 1rem 0;
+
+      .left {
+        width: 50%;
+        justify-content: flex-start;
+        @media screen and (max-width: 768px) {
+          width: 30%;
+        }
+      }
+
       .icons {
         width: 50%;
         display: flex;
@@ -202,14 +214,30 @@ html {
         }
         @media screen and (max-width: 768px) {
           justify-content: flex-end;
-          width: 30%;
+          width: 70%;
+        }
+
+        .play {
+          @media screen and (max-width: 768px) {
+            width: 65px;
+          }
+        }
+        .btn-follow {
+          @media screen and (max-width: 768px) {
+            width: 119px;
+          }
+        }
+        .btn-following {
+          @media screen and (max-width: 768px) {
+            width: 130px;
+          }
         }
 
         .play,
         .btn-follow {
-          padding: 0 3.8rem 0 0;
-          @media screen and (max-width: 768px) {
-            padding: 0 2rem 0 0;
+          margin: 0 3.8rem 0 0;
+          @media screen and (max-width: 991px) {
+            margin: 0 2rem 0 0;
           }
         }
 
@@ -236,31 +264,51 @@ html {
       display: block;
     }
 
-    .icons {
-      width: 50%;
+    .controls {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
 
-      .shuffle-white-mob {
-        cursor: pointer;
-        display: block;
-        background-image: url("../assets/img/icon-shuffle.svg");
-        background-repeat: no-repeat;
-        width: 40px;
-        height: 40px;
-      }
+      .icons {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-      .shuffle-active {
-        background-image: url("../assets/img/icon-shuffle-active.svg");
-        background-repeat: no-repeat;
-      }
+        .shuffle-white-mob {
+          cursor: pointer;
+          display: block;
+          background-image: url("../assets/img/icon-shuffle.svg");
+          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px;
+        }
 
-      .play {
-        width: 60px;
-        height: 60px;
+        .shuffle-active {
+          background-image: url("../assets/img/icon-shuffle-active.svg");
+          background-repeat: no-repeat;
+        }
+
+        .play {
+          width: 60px;
+          height: 60px;
+        }
       }
     }
+  }
+
+  .btn-follow {
+    background-image: url("../assets/img/btn-follow.svg");
+    background-repeat: no-repeat;
+    width: 119px;
+    height: 51px;
+  }
+
+  .btn-following {
+    background-image: url("../assets/img/btn-following.svg");
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 51px;
   }
 
   .shuffle-white,
@@ -268,23 +316,6 @@ html {
   .btn-follow,
   .song-card {
     cursor: pointer;
-  }
-
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 1rem 0;
-
-    .left {
-      width: 50%;
-      justify-content: flex-start;
-
-      .btn-follow {
-        width: 92px;
-        height: auto;
-      }
-    }
   }
 
   .song-card {

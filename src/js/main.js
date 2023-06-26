@@ -16,3 +16,15 @@ likedIcons.forEach((likedIcon) => {
     likedIcon.classList.toggle("liked-song");
   });
 });
+
+let followBtn = document.getElementById("followBtn");
+followBtn.addEventListener("click", () => {
+  followBtn.classList.toggle("btn-following");
+})
+
+let followBtnMobile = document.getElementById("followBtnMobile");
+followBtnMobile.addEventListener("click", () => {
+  followBtnMobile.classList.toggle("btn-following");
+});
+
+
