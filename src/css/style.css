@@ -42,6 +42,11 @@ html {
 .subtitle {
   font-size: 3.2rem;
   line-height: 3.9rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0 0 0 0 !important;
+  }
 }
 
 .text {
@@ -459,6 +464,10 @@ html {
 /* View */
 .profile {
   .header {
+    @media screen and (max-width: 576px) {
+      padding: 1rem;
+    }
+
     .img {
       width: 50%;
       height: 100%;
@@ -466,14 +475,30 @@ html {
       @media screen and (max-width: 992px) {
         width: 60%;
       }
+      @media screen and (max-width: 576px) {
+        margin-bottom: 1.8rem;
+        width: 70%;
+      }
+    }
+
+    .title {
+      @media screen and (max-width: 576px) {
+        font-size: 2.5rem;
+      }
     }
 
     .heading-subtitle {
       font-size: 2rem;
+      @media screen and (max-width: 576px) {
+        font-size: 1.6rem;
+      }
     }
 
     .desktop {
       display: block;
+      @media screen and (max-width: 576px) {
+        padding: 3rem 2rem;
+      }
     }
   }
 }
