@@ -218,10 +218,21 @@ html {
         }
 
         .play {
-          @media screen and (max-width: 768px) {
-            width: 65px;
-          }
+          background-image: url("../assets/img/icon-play.svg");
         }
+
+        .pause-icon {
+          background-image: url("../assets/img/icon-pause.svg");
+        }
+
+        .play,
+        .pause {
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 80px;
+          height: 80px;
+        }
+
         .btn-follow {
           @media screen and (max-width: 768px) {
             width: 119px;
@@ -267,6 +278,7 @@ html {
     .controls {
       display: flex;
       flex-direction: row;
+      align-items: center;
       justify-content: space-between;
 
       .icons {
@@ -290,8 +302,19 @@ html {
         }
 
         .play {
-          width: 60px;
-          height: 60px;
+          background-image: url("../assets/img/icon-play.svg");
+        }
+
+        .pause-icon {
+          background-image: url("../assets/img/icon-pause.svg");
+        }
+
+        .play,
+        .pause {
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 80px;
+          height: 80px;
         }
       }
     }
@@ -418,6 +441,7 @@ html {
       width: 38px;
       height: 38px;
       margin: 0 10rem 0 0;
+
       @media screen and (max-width: 576px) {
         width: 29px;
         height: 29px;
@@ -427,8 +451,9 @@ html {
   }
 }
 
-.hide {
-  display: none;
+.pulse {
+  transition-duration: 1.1s;
+  background-position: -2800px 0;
 }
 
 /* View */
@@ -441,6 +466,10 @@ html {
       @media screen and (max-width: 992px) {
         width: 60%;
       }
+    }
+
+    .heading-subtitle {
+      font-size: 2rem;
     }
 
     .desktop {
