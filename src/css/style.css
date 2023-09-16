@@ -234,18 +234,23 @@ html {
         .pause {
           background-repeat: no-repeat;
           background-position: center;
+          background-size: contain;
           width: 80px;
           height: 80px;
+          @media screen and (max-width: 768px) {
+            width: 70px;
+          }
         }
 
         .btn-follow {
           @media screen and (max-width: 768px) {
-            width: 119px;
+            width: 110px;
           }
         }
+
         .btn-following {
           @media screen and (max-width: 768px) {
-            width: 130px;
+            width: 120px;
           }
         }
 
@@ -257,18 +262,24 @@ html {
           }
         }
 
-        .shuffle-white {
-          background-image: url("../assets/img/icon-shuffle.svg");
+        .shuffle-white,
+        .shuffle-active {
           background-repeat: no-repeat;
+          background-size: contain;
           width: 45px;
           height: 45px;
+          @media screen and (max-width: 768px) {
+            width: 35px;
+            height: 35px;
+          }
+        }
+
+        .shuffle-white {
+          background-image: url("../assets/img/icon-shuffle.svg");
         }
 
         .shuffle-active {
           background-image: url("../assets/img/icon-shuffle-active.svg");
-          background-repeat: no-repeat;
-          width: 45px;
-          height: 45px;
         }
       }
     }
@@ -326,20 +337,34 @@ html {
         }
       }
     }
+
+    .subtitle {
+      padding: 0 0 2rem;
+    }
+  }
+
+  .btn-follow,
+  .btn-following {
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .btn-follow {
     background-image: url("../assets/img/btn-follow.svg");
-    background-repeat: no-repeat;
     width: 119px;
     height: 51px;
+    @media screen and (max-width: 768px) {
+      width: 110px;
+    }
   }
 
   .btn-following {
     background-image: url("../assets/img/btn-following.svg");
-    background-repeat: no-repeat;
     width: 130px;
     height: 51px;
+    @media screen and (max-width: 768px) {
+      width: 120px;
+    }
   }
 
   .shuffle-white,
